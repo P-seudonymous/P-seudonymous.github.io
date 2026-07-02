@@ -12,6 +12,14 @@ currently under construction.
 
 ---
 
+# About me
+
+I am a 3rd year undergrad student, actively working and researching on hardware security, on both the cryptographic and logic + firmware side.
+
+On the cryptographic side, im currently exploring pqc related encryptions, with a focus on lattice theory and finite field theory.
+
+On the Logic + firmware side, im exploring implementations, with a focus on compute and specific processor encryptions
+
 # Experience
 
 ### Research Intern

@@ -18,19 +18,10 @@ enabled = true
 
 title = "Aryan Saraf"
 
+
+
 subtitle = """
-Cyber Physical Systems Undergrad @ MIT, Manipal
-
-Hardware Security
-Applied Cryptography
-Side-Channel Analysis
-Capture The Flag
-
-Current Position
-
-Summer Research Intern
-IIT Bombay
-"""
+Hardware Security Enthusiast"""
 
 imageUrl = "/pfp.png"
 

@@ -7,5 +7,23 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resume</title>
+      <link>http://localhost:1313/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/resume/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/files/resume.pdf&#34;&gt;Download PDF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;currently under construction.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+&lt;p&gt;I am a 3rd year undergrad student, actively working and researching on hardware security, on both the cryptographic and logic + firmware side.&lt;/p&gt;
+&lt;p&gt;On the cryptographic side, im currently exploring pqc related encryptions, with a focus on lattice theory and finite field theory.&lt;/p&gt;
+&lt;p&gt;On the Logic + firmware side, im exploring implementations, with a focus on compute and specific processor encryptions&lt;/p&gt;
+&lt;h1 id=&#34;experience&#34;&gt;Experience&lt;/h1&gt;
+&lt;h3 id=&#34;research-intern&#34;&gt;Research Intern&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;TrustLab - Indian Institute of Technology Bombay&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;May 2026 - Present&lt;/em&gt;&lt;br&gt;
+Supervisor: Prof. Sayandeep Saha&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
