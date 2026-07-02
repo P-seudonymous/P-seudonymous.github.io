@@ -1,0 +1,25 @@
+baseURL = "https://P-seudonymous.github.io/"
+languageCode = "en-us"
+title = "Your Name"
+theme = "PaperMod"
+
+[params]
+  description = "CTF writeups, security research, and projects"
+  disableThemeToggle = true
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  defaultTheme = "auto"
+
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 2
+

@@ -1,0 +1,18 @@
+html, html.dark, html.light, :root {
+  --theme: #1a1b26 !important;
+  --entry: #24283b !important;
+  --primary: #c0caf5 !important;
+  --secondary: #a9b1d6 !important;
+  --tertiary: #414868 !important;
+  --content: #c0caf5 !important;
+  --code-block-bg: #1f2335 !important;
+  --code-bg: #1f2335 !important;
+  --border: #414868 !important;
+  color-scheme: dark !important;
+}
+
+body {
+  background: var(--theme) !important;
+  color: var(--content) !important;
+}
+
