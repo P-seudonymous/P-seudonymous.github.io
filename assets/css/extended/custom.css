@@ -16,3 +16,10 @@ body {
   color: var(--content) !important;
 }
 
+.profile_inner img {
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
