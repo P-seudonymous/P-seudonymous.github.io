@@ -29,9 +29,6 @@ On the Logic + firmware side, im exploring implementations, with a focus on comp
 Supervisor: Prof. Sayandeep Saha
 
 - Currently working on SASCA attacks against Kyber (ML-KEM) on ARM64 processors.
-- Successful practical attack on Cortex M4 running baremetal AES-128, by capturing the traces by an oscilloscope and recovering the full 128-bit key. [Codebase: Private]
-- Replicated results of a USENIX WOOT paper by recovering AES-128 keys on ARM Cortex-A72 using Deep Learning and statistical attacks. [Codebase: Private]
-- Implemented Soft Analytical Side-Channel Analysis (SASCA) against AES-128. [Codebase: Private]
 
 ### Cybersecurity Intern
 
