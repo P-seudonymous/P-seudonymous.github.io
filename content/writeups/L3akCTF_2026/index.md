@@ -308,6 +308,13 @@ thats all ig.
 
 link to solve script -> [solvescript](solve.py)
 
+```
+$ python solve.py 
+K (final_out/circus_dac)   = 0.20289475231495493
+circus_dac                 = 0.29765709011850355
+FLAG: L3AK{Cl0wN1nG_4r0uNd_w1th_4n4LoG_ciRcu1t5}
+```
+
 ## final notes ig?
 
 pretty good challenge, it was quite the change from hardware challenges that i see, its usually either some firmware rev or some rf.
