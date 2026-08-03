@@ -94,6 +94,25 @@ from `R001` till `R226` and `R_U1_BIAS`, which feeds into the `net_tap` node, we
 
 `R001` is the resistor, `circus_dac` and `n001` are the nodes, and the value of the resistor is 144761ohm.
 
+> edit: forgot to mention the motivation for mesh analysis.
+
+for this part of the challenge, we do NOT need to visualize anything, since we can see how the node mappings work, which i felt was random(i didnt really analyze it properly).
+
+nodal analysis only cares about connectivity (which node connects to which, and at what resistance), not layout.
+building the matrix is just looping over the (nodeA, nodeB, value) triples straight from the text and dumping numbers into the right cells (3 fixed rules-> touches gnd / touches circus_dac / touches two unknowns)
+
+after that, solving G·V=I is just gaussian elimination, which would run identically no matter how the mesh was drawn or laid out.
+
+so a picture buys you zero extra correctness here.
+
+however, for visual flair:
+
+![mesh](net_tap_schematic.png)
+
+but the main point is that, since only 1 node, which is `net_tap` is going forward in the challenge(being referenced in the amplifier(E_U1), it means that we need to focus on that node.
+
+and out of the 44 total nodes, [`n001`, `n044`], we only care about `net_tap`'s value, so we only return that value when we solve the entire system.
+
 to solve the nodes:
 
 ```
@@ -137,12 +156,14 @@ def solve_mesh(mesh_edges):
     return sol[idx['net_tap']]
 ```
 
-since the mesh collapses at `net_tap`, we move on to the FET part, as there are some `NMOS` and `PMOS` definitions.
+since the mesh collapses at `net_tap` *for us*, we move on to the FET part, as there are some `NMOS` and `PMOS` definitions.
 
 ```
 .model NCLOWN NMOS LEVEL=1 VTO=0.37 KP=83u LAMBDA=0
 .model PCLOWN PMOS LEVEL=1 VTO=-0.41 KP=47u LAMBDA=0
 ```
+
+clown definitions only lol, no nodes are being referenced from this or anything lmao.
 
 ![final stretch](final_fets.png)
 
