@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Hardware security research, competition writeups, and reports by Aryan Saraf.{{ end }}">
+  <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  <link rel="preload" href="{{ "fonts/lmsans-regular-webfont.woff" | relURL }}" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}?v=latin-modern-sans-1">
+  <script>document.documentElement.dataset.theme = localStorage.getItem('site-theme') || 'dark';</script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><div class="grid"></div><div class="glow"></div></div>
+  {{ if not .IsHome }}<div class="home-underlay" aria-hidden="true"><div class="home-shell">{{ partial "home-hero.html" .Site.Home }}</div></div>{{ end }}
+  {{ block "main" . }}{{ end }}
+  <nav class="dock" aria-label="Site navigation">
+    <a class="dock-item" href="{{ .Site.Home.RelPermalink }}" {{ if .IsHome }}aria-current="page"{{ end }}>home</a>
+    <a class="dock-item" href="{{ "/about/" | relURL }}" {{ if eq .RelPermalink ("/about/" | relURL) }}aria-current="page"{{ end }}>about</a>
+    <a class="dock-item" href="{{ "/blogs/" | relURL }}" {{ if eq .Section "blogs" }}aria-current="page"{{ end }}>blogs</a>
+    <a class="dock-item" href="{{ "/research/" | relURL }}" {{ if eq .Section "research" }}aria-current="page"{{ end }}>research</a>
+    <a class="dock-item" href="{{ "/resume/" | relURL }}" {{ if eq .RelPermalink ("/resume/" | relURL) }}aria-current="page"{{ end }}>resume</a>
+    <span class="dock-separator"></span>
+    <button class="dock-theme" type="button" data-theme-toggle aria-label="Toggle light and dark theme">◐</button>
+  </nav>
+  <footer class="site-footer"><span>© {{ now.Year }} Aryan Saraf</span><span>Built for the curious.</span></footer>
+  <script src="{{ "js/site.js" | relURL }}?v=last-track-3" defer></script>
+</body>
+</html>
