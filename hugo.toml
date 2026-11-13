@@ -1,53 +1,11 @@
-baseURL = "https://P-seudonymous.github.io/"
-languageCode = "en-us"
+baseURL = "https://p-seudonymous.github.io/"
+locale = "en-US"
 title = "Aryan Saraf"
-theme = "PaperMod"
+contentDir = "content"
 
-[params]
-  description = "Hardware Security, Applied Cryptography, SCA/FIA, Secure Firmware"
-  disableThemeToggle = true
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  defaultTheme = "auto"
+[markup.goldmark.renderer]
+  unsafe = true
 
-[params.profileMode]
-enabled = true
-
-title = "Aryan Saraf"
-
-
-
-subtitle = """
-Hardware Security Enthusiast"""
-
-imageUrl = "/pfp.png"
-
-imageTitle = "Aryan Saraf"
-
-
-[[params.profileMode.buttons]]
-name = "Resume"
-url = "/resume"
-
-[[params.profileMode.buttons]]
-name = "Research"
-url = "/research"
-
-[[params.profileMode.buttons]]
-name = "Writeups"
-url = "/writeups"
-
-[[params.socialIcons]]
-name = "x"
-url = "https://x.com/__pseudonymous_"
-
-[[params.socialIcons]]
-name = "github"
-url = "https://github.com/P-seudonymous"
-
-[[params.socialIcons]]
-name = "email"
-url = "mailto:aryan.sarafhp@gmail.com"
+[markup.highlight]
+  style = "github-dark"
+  noClasses = false
