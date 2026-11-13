@@ -1,0 +1,7 @@
+{{ define "main" }}
+<main class="reading-shell listing listing-{{ .Section }}">
+  <div class="reading-content"><p class="page-kicker">ARCHIVE / {{ upper .Title }}</p><h1>{{ lower .Title }}</h1><div class="article-rule" aria-hidden="true"></div>{{ with .Content }}<div class="prose intro">{{ . }}</div>{{ end }}
+    {{ with .RegularPagesRecursive }}<div class="writeup-grid">{{ range .ByDate.Reverse }}<a class="writeup-card" href="{{ .RelPermalink }}"><span class="writeup-card-top"><span>{{ upper (.Date.Format "02 Jan 2006") }}</span><span aria-hidden="true">↗</span></span><h2>{{ .Title }}</h2>{{ with .Description }}<p>{{ . }}</p>{{ end }}{{ with .Params.tags }}<span class="writeup-tags">{{ range first 3 . }}<span>{{ . }}</span>{{ end }}</span>{{ end }}</a>{{ end }}</div>{{ end }}
+  </div>
+</main>
+{{ end }}

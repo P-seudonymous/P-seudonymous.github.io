@@ -1,0 +1,17 @@
+{{ define "main" }}
+<main class="home-shell">
+  {{ partial "home-hero.html" . }}
+  {{ $recent := where .Site.RegularPages "Section" "blogs" }}
+  {{ with first .Params.recentCount ($recent.ByDate.Reverse) }}
+  <section class="home-featured" aria-labelledby="featured-title">
+    <div class="home-featured-heading"><h2 id="featured-title">{{ $.Params.recentHeading }}</h2><a href="{{ $.Params.recentLinkURL }}">{{ $.Params.recentLinkText }}</a></div>
+    <div class="home-featured-list">{{ range . }}<a href="{{ .RelPermalink }}"><span>{{ .Title }}</span><small>{{ .Description }}</small><span aria-hidden="true">↗</span></a>{{ end }}</div>
+  </section>
+  {{ end }}
+  <aside class="live-strip" data-discord-id="{{ .Params.discordUserId }}" aria-label="Live activity">
+    <a class="live-item live-link" href="https://discord.com/users/{{ .Params.discordUserId }}" target="_blank" rel="noopener noreferrer" aria-label="Open Discord profile"><span class="status-dot" id="discord-dot"></span><span>{{ .Params.discordLabel }}</span><strong id="discord-status">{{ .Params.discordInitialStatus }}</strong></a>
+    <div class="live-divider"></div>
+    <div class="live-item" id="spotify-activity"><span class="spotify-bars" aria-hidden="true"><i></i><i></i><i></i></span>{{ with .Params.spotifyProfileURL }}<a class="spotify-profile" id="spotify-label" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="Open Spotify profile">{{ $.Params.spotifyLabel }}</a>{{ else }}<span id="spotify-label">{{ $.Params.spotifyLabel }}</span>{{ end }}{{ $idle := .Params.spotifyIdleStatus | default "Nothing playing" }}<a id="spotify-status" data-idle-status="{{ $idle }}" target="_blank" rel="noopener noreferrer">{{ $idle }}</a></div>
+  </aside>
+</main>
+{{ end }}

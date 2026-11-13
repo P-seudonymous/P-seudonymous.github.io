@@ -1,0 +1,5 @@
+{{ define "main" }}
+<main class="reading-shell">
+  <article class="reading-content article">{{ if eq .Section "blogs" }}<a class="article-back" href="{{ "/blogs/" | relURL }}">← Back to blogs</a>{{ end }}<p class="page-kicker">{{ if .Date.IsZero }}FIELD NOTES{{ else }}{{ upper (.Date.Format "02 January 2006") }}{{ end }}</p><h1>{{ lower .Title }}</h1>{{ with .Description }}<p class="article-description">{{ . }}</p>{{ end }}<div class="article-rule"></div><div class="prose">{{ .Content }}</div></article>
+</main>
+{{ end }}
