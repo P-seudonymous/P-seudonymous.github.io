@@ -18,13 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      HUGO_VERSION: "0.162.0"
+      HUGO_VERSION: "0.167.0"
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
 
       - id: pages
         uses: actions/configure-pages@v5
